@@ -20,9 +20,8 @@
     };
 
     boot.kernelPackages = pkgs.linuxPackages_latest; # Use latest linux kernel
-
-    networking.hostName = "nixos"; # Define your hostname.
  
+    networking.hostName = "surface";
     networking.networkmanager.enable = true;
 
     # Set your time zone.
@@ -62,7 +61,6 @@
         neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
         wget
         git
-        proxychains-ng
     ];
 
     system.stateVersion = "24.11"; # Did you read the comment?

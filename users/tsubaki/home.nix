@@ -5,6 +5,7 @@
 
     home.username = "tsubaki";
     home.homeDirectory = "/home/tsubaki";
+    home.stateVersion = "24.05";
 
     home.packages = with pkgs; [
         # Browser
@@ -14,9 +15,7 @@
         vlc
         bitwarden
         zip
-        xz
         unzip
-        neofetch
         nix-output-monitor
         clash-verge-rev
 
@@ -30,35 +29,37 @@
         # IM
         telegram-desktop
         #discord
-        qq
+        #qq
     ];
 
-    programs.vscode = {
-        enable = true;
-        package = pkgs.vscode.fhs;
-    };
+    programs = {
+        vscode = {
+            enable = true;
+            package = pkgs.vscode.fhs;
+        };
 
-    programs.git = {
-        enable = true;
-        userName = "TsubakiDev";
-        userEmail = "i@tsubakidev.cc";
-    };
+        git = {
+            enable = true;
+            userName = "TsubakiDev";
+            userEmail = "i@tsubakidev.cc";
+        };
 
-    programs.fish = {
-        enable = true;
-    };
+        fish = { 
+            enable = true;
+        };
 
-    programs.starship = {
-        enable = true;
-        settings = {
-            add_newline = false;
-            aws.disabled = true;
-            gcloud.disabled = true;
-            line_break.disabled = true;
+        starship = {
+            enable = true;
+            settings = {
+                add_newline = false;
+                aws.disabled = true;
+                gcloud.disabled = true;
+                line_break.disabled = true;
+            };
+        };
+
+        home-manager = { 
+            enable = true;
         };
     };
-
-    home.stateVersion = "24.05";
-
-    programs.home-manager.enable = true;
 }
