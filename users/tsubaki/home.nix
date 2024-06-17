@@ -15,6 +15,15 @@ in
     home.homeDirectory = "/home/tsubaki";
     home.stateVersion = "24.05";
 
+    home.sessionVariables = {
+        EDITOR = "nvim";
+        MOZ_USE_XINPUT2 = "1";
+    };
+
+    home.shellAliases = {
+        nswitch = "sudo bash -c 'nixos-rebuild switch |& nom'";
+    };
+
     home.packages = with pkgs; [
         # Browser
         ungoogled-chromium
@@ -46,6 +55,11 @@ in
         vscode = {
             enable = true;
             package = pkgs.vscode.fhs;
+        };
+
+        neovim = {
+            enable = true;
+            plugins = with pkgs.vimPlugins; [vim-nix];
         };
 
         git = {
