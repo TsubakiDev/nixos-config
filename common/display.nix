@@ -1,18 +1,27 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 
 {
-    # Enable the X11 windowing system.
-    services.xserver.enable = true;
-
-    # Enable the GNOME Desktop Environment.
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
-
-    # Configure keymap in X11
-    services.xserver = {
-        xkb.layout = "us";
-        xkb.variant = "";
-    };
+    services = {
+		# Ensure gnome-settings-daemon udev rules are enabled.
+		udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+		xserver = {
+			# Required for DE to launch.
+			enable = true;
+			displayManager = {
+				gdm = {
+					enable = true;
+					wayland = true;
+				};
+			};
+			# Enable Desktop Environment.
+			desktopManager.gnome.enable = true;
+			# Configure keymap in X11.
+			layout = user.services.xserver.layout;
+			xkbVariant = user.services.xserver.xkbVariant;
+			# Exclude default X11 packages I don't want.
+			excludePackages = with pkgs; [ xterm ];
+		};
+	};
 
     environment.gnome.excludePackages = (with pkgs; [
         gnome-photos

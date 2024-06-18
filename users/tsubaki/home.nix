@@ -1,13 +1,5 @@
 { pkgs, ... }:
 
-let
-  aagl-gtk-on-nix = import (
-    builtins.fetchTarball {
-        url = "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz";
-        sha256 = "9bf12b2b6ed25637b127fa96d6bd9758fe784420dc9b0e1fa67f47eb088454e5";
-    }
-  );
-in
 {
     nixpkgs.config.allowUnfree = true;
 
@@ -30,12 +22,10 @@ in
 
         # Tools
         vlc
-        bitwarden
         zip
         unzip
         nix-output-monitor
         clash-verge-rev
-        thunderbird
 
         # Programming Languages
         rustup
@@ -46,9 +36,6 @@ in
 
         # IM
         telegram-desktop
-        
-        # Games
-        aagl-gtk-on-nix.honkers-railway-launcher
     ];
 
     programs = {
@@ -69,6 +56,10 @@ in
         };
 
         fish = { 
+            enable = true;
+        };
+
+        thunderbird = {
             enable = true;
         };
 
