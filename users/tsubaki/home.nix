@@ -14,6 +14,8 @@
 
     home.shellAliases = {
         nswitch = "sudo bash -c 'nixos-rebuild switch |& nom'";
+        genshin-start = "waydroid app launch GenshinImpact";
+        starrail-start = "waydroid app launch Honkai:StarRail";
     };
 
     home.packages = with pkgs; [
