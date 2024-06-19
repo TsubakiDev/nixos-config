@@ -39,7 +39,11 @@
     users.users.tsubaki = {
         isNormalUser = true;
         description = "tsubaki";
-        extraGroups = [ "networkmanager" "wheel" ];
+        uid = 1000;
+        extraGroups = [ 
+            "networkmanager"
+            "wheel"
+        ];
         shell = pkgs.fish;
     };
 
