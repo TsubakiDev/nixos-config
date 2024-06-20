@@ -3,7 +3,7 @@
 {
     nix.settings = {
         experimental-features = [ "nix-command" "flakes" ];
-        # Use TUNA Mirror.
+        # Use SJTU Mirror.
         substituters = lib.mkForce [ "https://mirror.sjtu.edu.cn/nix-channels/store" ];
         auto-optimise-store = true;
     };
