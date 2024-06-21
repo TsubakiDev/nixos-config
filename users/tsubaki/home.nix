@@ -19,7 +19,7 @@
 
     home.packages = with pkgs; [
         # Browser
-        ungoogled-chromium
+        google-chrome
 
         # Tools
         vlc
@@ -27,6 +27,7 @@
         unzip
         nix-output-monitor
         clash-verge-rev
+        nodejs_22
 
         # Programming Languages
         rustup
@@ -47,7 +48,9 @@
 
         neovim = {
             enable = true;
-            plugins = with pkgs.vimPlugins; [vim-nix];
+            plugins = with pkgs.vimPlugins; [
+                vim-nix
+            ];
         };
 
         git = {
