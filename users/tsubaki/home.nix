@@ -27,6 +27,7 @@
         unzip
         nix-output-monitor
         clash-verge-rev
+        netease-cloud-music-gtk
         nodejs_22
 
         # Programming Languages

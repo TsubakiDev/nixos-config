@@ -23,7 +23,6 @@
     # Use latest linux kernel.
     boot.kernelPackages = pkgs.linuxPackages_latest;
  
-    networking.hostName = "laptop";
     networking.networkmanager.enable = true;
 
     # Set your time zone.
