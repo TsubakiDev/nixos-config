@@ -23,6 +23,7 @@
     # Use latest linux kernel.
     boot.kernelPackages = pkgs.linuxPackages_latest;
  
+    networking.hostName = "mbp";
     networking.networkmanager.enable = true;
 
     # Set your time zone.
@@ -30,9 +31,6 @@
 
     # Enable CUPS to print documents.
     services.printing.enable = true;
-
-    # Enable Waydroid. (To play anime games)
-    virtualisation.waydroid.enable = true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.tsubaki = {

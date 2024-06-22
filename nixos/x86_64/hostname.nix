@@ -1,4 +1,0 @@
-{ ... }:
-{
-    networking.hostName = "mbp";
-}

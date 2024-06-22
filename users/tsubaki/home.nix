@@ -13,8 +13,7 @@
     };
 
     home.shellAliases = {
-        nswitch = "sudo bash -c 'nixos-rebuild switch |& nom'";
-        sr-start = "waydroid app launch Honkai:StarRail";
+        nswitch = "sudo bash -c 'nixos-rebuild switch --flake .#laptop |& nom'";
     };
 
     home.packages = with pkgs; [
@@ -35,7 +34,7 @@
         go
 
         # IDE
-       #  jetbrains.idea-community
+        # jetbrains.idea-community
 
         # IM
         telegram-desktop
