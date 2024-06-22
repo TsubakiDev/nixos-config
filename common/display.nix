@@ -1,4 +1,4 @@
-{ pkgs, user, ... }:
+{ pkgs, ... }:
 
 {
     services = {
@@ -16,8 +16,10 @@
 			# Enable Desktop Environment.
 			desktopManager.gnome.enable = true;
 			# Configure keymap in X11.
-			layout = user.services.xserver.layout;
-			xkbVariant = user.services.xserver.xkbVariant;
+			xkb = {
+				layout = "us";
+				variant = "";
+			};
 			# Exclude default X11 packages I don't want.
 			excludePackages = with pkgs; [ xterm ];
 		};

@@ -6,12 +6,12 @@
 
 {
     imports = [
-        ../../common/display.nix
-        ../../common/input.nix
-        ../../common/sound.nix
-        ../../common/fonts.nix
-        ../../common/internationalisation.nix
-        ../../common/settings/nix.nix
+        ../common/display.nix
+        ../common/input.nix
+        ../common/sound.nix
+        ../common/fonts.nix
+        ../common/internationalisation.nix
+        ../common/settings/nix.nix
     ];
 
     # Bootloader.

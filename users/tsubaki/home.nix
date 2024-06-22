@@ -35,7 +35,7 @@
         go
 
         # IDE
-        jetbrains.idea-community
+       #  jetbrains.idea-community
 
         # IM
         telegram-desktop
@@ -61,10 +61,6 @@
         };
 
         fish = { 
-            enable = true;
-        };
-
-        thunderbird = {
             enable = true;
         };
 

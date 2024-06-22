@@ -20,11 +20,11 @@
             ];
         };
 
-        nixosConfigurations.x86_64_laptop = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.mbp = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
                 ./nixos/x86_64/hostname.nix
-                # ./nixos/aarch64/hardware-configuration.nix
+                ./nixos/x86_64/hardware-configuration.nix
 
                 ./nixos/configuration.nix
                 home-manager.nixosModules.home-manager {
@@ -33,5 +33,5 @@
             ];
         };
 
-    }
+    };
 }
