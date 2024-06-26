@@ -13,7 +13,8 @@
     };
 
     home.shellAliases = {
-        nswitch = "sudo bash -c 'nixos-rebuild switch --flake .#laptop |& nom'";
+        nswitch = "sudo bash -c 'nixos-rebuild switch |& nom'";
+        nfu = "sudo nix flake update";
     };
 
     home.packages = with pkgs; [
@@ -21,23 +22,23 @@
         google-chrome
 
         # Tools
-        vlc
-        zip
-        unzip
+        xz
         nix-output-monitor
+        gcc
+        fastfetch
+
+        # Utility Softwares
+        vlc
+        bitwarden-desktop
         clash-verge-rev
-        netease-cloud-music-gtk
-        nodejs_22
 
         # Programming Languages
         rustup
         go
 
-        # IDE
-        # jetbrains.idea-community
-
         # IM
         telegram-desktop
+        element-desktop
     ];
 
     programs = {

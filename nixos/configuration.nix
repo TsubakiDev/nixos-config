@@ -6,12 +6,12 @@
 
 {
     imports = [
-        ../common/display.nix
-        ../common/input.nix
-        ../common/sound.nix
-        ../common/fonts.nix
-        ../common/internationalisation.nix
-        ../common/settings/nix.nix
+        ../common/display/default.nix
+        ../common/input/default.nix
+        ../common/sound/default.nix
+        ../common/fonts/default.nix
+        ../common/i18n/default.nix
+        ../common/settings/default.nix
     ];
 
     # Bootloader.
@@ -23,7 +23,7 @@
     # Use latest linux kernel.
     boot.kernelPackages = pkgs.linuxPackages_latest;
  
-    networking.hostName = "mbp";
+    networking.hostName = "laptop";
     networking.networkmanager.enable = true;
 
     # Set your time zone.
