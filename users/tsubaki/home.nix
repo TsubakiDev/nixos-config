@@ -25,7 +25,6 @@
         xz
         nix-output-monitor
         fastfetch
-        wezterm
 
         # Utility Softwares
         vlc
