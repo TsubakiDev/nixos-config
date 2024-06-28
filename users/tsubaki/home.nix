@@ -24,8 +24,8 @@
         # Tools
         xz
         nix-output-monitor
-        gcc
         fastfetch
+        wezterm
 
         # Utility Softwares
         vlc
