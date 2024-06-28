@@ -38,7 +38,6 @@
 
         # IM
         telegram-desktop
-        element-desktop
     ];
 
     programs = {
