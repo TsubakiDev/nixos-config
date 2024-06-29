@@ -13,8 +13,15 @@
     };
 
     home.shellAliases = {
+        # System
         nswitch = "sudo bash -c 'nixos-rebuild switch |& nom'";
         nfu = "sudo nix flake update";
+
+        # Git
+        gcommit = "git commit -m";
+        gpush = "git push";
+        gpull = "git pull";
+        grebase = "git rebase";
     };
 
     home.packages = with pkgs; [
