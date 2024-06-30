@@ -32,7 +32,6 @@
         xz
         nix-output-monitor
         fastfetch
-        hyper
 
         # Utility Softwares
         vlc
