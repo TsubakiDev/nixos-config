@@ -8,25 +8,17 @@
         ../common/fonts/default.nix
         ../common/i18n/default.nix
         ../common/settings/default.nix
+        ../common/networking/default.nix
+        ../common/boot/default.nix
+
+        ../services/dae/default.nix
+        ../services/printing/default.nix
     ];
 
-    # Bootloader.
-    boot.loader = {
-        systemd-boot.enable = true;
-        efi.canTouchEfiVariables = true;
-    };
-
-    # Use latest linux kernel.
-    boot.kernelPackages = pkgs.linuxPackages_latest;
- 
     networking.hostName = "laptop";
-    networking.networkmanager.enable = true;
 
     # Set your time zone.
     time.timeZone = "Asia/Shanghai";
-
-    # Enable CUPS to print documents.
-    services.printing.enable = true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.tsubaki = {
