@@ -2,6 +2,6 @@
 {
     services.dae = {
         enable = true;
-        configFile = "configuration.dae";
+        configFile = ./configuration.dae;
     };
 }

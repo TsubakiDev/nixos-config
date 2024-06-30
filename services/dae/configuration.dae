@@ -1,12 +1,12 @@
 global {
   log_level: warning
-  wan_interface: wlo1 # 修改
+  wan_interface: wlp3s0
   dial_mode: domain
   allow_insecure: false
   auto_config_kernel_parameter: true
 }
 node {
-  clash: 'socks5://localhost:78917'
+  clash: 'socks5://localhost:7897'
 }
 dns {
   upstream {
