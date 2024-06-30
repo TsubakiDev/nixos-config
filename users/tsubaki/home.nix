@@ -37,7 +37,6 @@
         vlc
         bitwarden-desktop
         clash-verge-rev
-        wezterm
 
         # Programming Languages
         rustup
@@ -67,6 +66,10 @@
         };
 
         fish = { 
+            enable = true;
+        };
+
+        wezterm = {
             enable = true;
         };
 
