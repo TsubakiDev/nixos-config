@@ -26,12 +26,13 @@
 
     home.packages = with pkgs; [
         # Browser
-        google-chrome
+        firefox
 
         # Tools
         xz
         nix-output-monitor
         fastfetch
+        hyper
 
         # Utility Softwares
         vlc
