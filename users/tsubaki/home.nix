@@ -37,6 +37,7 @@
         vlc
         bitwarden-desktop
         clash-verge-rev
+        wezterm
 
         # Programming Languages
         rustup
