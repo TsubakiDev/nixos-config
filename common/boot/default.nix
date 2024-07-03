@@ -1,14 +1,20 @@
-{ pkgs, ... }:
+{ ... }:
 {
-    # Bootloader.
-    boot.loader = {
-        systemd-boot.enable = true;
-        efi.canTouchEfiVariables = true;
+  imports = [ ./kernel.nix ];
+
+  # Bootloader.
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
     };
 
-    # Use latest linux kernel.
-    boot.kernelPackages = pkgs.linuxPackages_latest;
+    # Add support for NTFS
+    supportedFilesystems = [ "ntfs" ];
 
-    # Support NTFS
-    boot.supportedFilesystems = [ "ntfs" ];
+    tmp = {
+      useTmpfs = false; # This value will be set to true in next 1 year.
+      tmpfsSize = "80%";
+    };
+  };
 }

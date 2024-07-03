@@ -1,7 +1,7 @@
 { ... }:
 {
-    services.dae = {
-        enable = true;
-        configFile = ./configuration.dae;
-    };
+  services.dae = {
+    enable = true;
+    configFile = ./configuration.dae;
+  };
 }

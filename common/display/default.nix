@@ -10,7 +10,7 @@
 			displayManager = {
 				gdm = {
 					enable = true;
-					wayland = true;
+					#wayland = true;
 				};
 			};
 			# Enable Desktop Environment.
