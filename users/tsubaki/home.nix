@@ -18,7 +18,7 @@
     nfu = "sudo nix flake update";
 
     # Git
-    gcommit = "git commit -m";
+    gcwm = "git commit -m";
     gpush = "git push";
     gpull = "git pull";
     grebase = "git rebase";
@@ -42,9 +42,6 @@
 
     # IM
     telegram-desktop
-
-    # Games
-    osu-lazer
   ];
 
   programs = {
