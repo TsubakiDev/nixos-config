@@ -8,7 +8,7 @@
       grub = {
         enable = true;
         efiSupport = true;
-        devices = [ "nodev" ];
+        device = "nodev";
       };
       efi.canTouchEfiVariables = true;
     };
