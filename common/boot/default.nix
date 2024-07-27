@@ -5,7 +5,11 @@
   # Bootloader.
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      grub = {
+        enable = true;
+        efiSupport = true;
+        devices = [ "nodev" ];
+      };
       efi.canTouchEfiVariables = true;
     };
 
@@ -13,7 +17,7 @@
     supportedFilesystems = [ "ntfs" ];
 
     tmp = {
-      useTmpfs = false; # This value will be set to true in next 1 year.
+      useTmpfs = true;
       tmpfsSize = "80%";
     };
   };

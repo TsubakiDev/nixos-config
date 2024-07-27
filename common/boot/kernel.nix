@@ -1,13 +1,18 @@
 { pkgs, ... }:
 {
-  # Use latest linux kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   boot = {
-    kernel = {
-      sysctl = {
-        "vm.swappiness" = 10;
-      };
-    };
-  };
+    # Use latest linux kernel.
+    kernelPackages = pkgs.linuxPackages_latest;
+
+    # Enable Rust language support
+    kernelPatches = [
+      {
+        name = "Rust Language Support";
+        patch = null;
+        features = {
+          rust = true;
+        };
+      }
+    ];
+  };  
 }

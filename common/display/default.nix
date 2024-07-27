@@ -10,7 +10,7 @@
       displayManager = {
         gdm = {
           enable = true;
-          #wayland = true;
+          wayland = true;
         };
       };
       # Enable Desktop Environment.
@@ -30,16 +30,16 @@
       gnome-photos
       gnome-tour
       gedit
-    ])
-    ++ (with pkgs.gnome; [
       cheese # webcam tool
-      gnome-music
       gnome-terminal
       epiphany # web browser
       geary # email reader
       evince # document viewer
-      gnome-characters
       totem # video player
+    ])
+    ++ (with pkgs.gnome; [
+      gnome-music
+      gnome-characters
       tali # poker game
       iagno # go game
       hitori # sudoku game

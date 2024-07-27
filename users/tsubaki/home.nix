@@ -35,6 +35,7 @@
     vlc
     bitwarden-desktop
     clash-verge-rev
+    libreoffice-fresh
 
     # Programming Languages
     rustup
