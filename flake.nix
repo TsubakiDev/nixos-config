@@ -34,8 +34,8 @@
         modules = [
           ./system/default.nix
           ./system/workstation/hardware.nix
-	        home-manager.nixosModules.home-manager
-	        { home-manager.users.tsubaki = import ./users/tsubaki/home.nix; }
+	  home-manager.nixosModules.home-manager
+	  { home-manager.users.tsubaki = import ./users/tsubaki/home.nix; }
         ];
       };
     };
