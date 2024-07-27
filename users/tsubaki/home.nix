@@ -36,6 +36,7 @@
     bitwarden-desktop
     clash-verge-rev
     libreoffice-fresh
+    spotify
 
     # Programming Languages
     rustup
