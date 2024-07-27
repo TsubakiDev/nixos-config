@@ -24,6 +24,8 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  networking.hostName = "laptop";
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/a956b895-0fa2-4b7f-a21a-453237da1c5c";
     fsType = "ext4";

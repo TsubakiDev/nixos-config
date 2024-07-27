@@ -15,8 +15,6 @@
     ../services/printing/default.nix
   ];
 
-  networking.hostName = "laptop";
-
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 

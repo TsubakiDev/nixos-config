@@ -1,6 +1,6 @@
 global {
   log_level: warning
-  wan_interface: wlp3s0
+  wan_interface: enp5s0
   dial_mode: domain
   allow_insecure: false
   auto_config_kernel_parameter: true
