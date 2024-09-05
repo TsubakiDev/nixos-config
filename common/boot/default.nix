@@ -1,9 +1,10 @@
 { ... }:
 {
-  imports = [ ./kernel.nix ];
-
   # Bootloader.
   boot = {
+    # Use latest linux-xanmod kernel.
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+
     loader = {
       grub = {
         enable = true;

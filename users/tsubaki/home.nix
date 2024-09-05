@@ -26,17 +26,19 @@
 
   home.packages = with pkgs; [
     # Tools
-    xz
     nix-output-monitor
     fastfetch
     nixfmt-rfc-style
 
     # Utility Softwares
-    vlc
     bitwarden-desktop
     clash-verge-rev
     libreoffice-fresh
-    spotify
+    yubikey-manager-qt
+
+    # Media
+    vlc
+    cider
 
     # Programming Languages
     rustup
@@ -44,6 +46,9 @@
 
     # IM
     telegram-desktop
+
+    # Games
+    osu-lazer-bin
   ];
 
   programs = {
@@ -61,6 +66,10 @@
       plugins = with pkgs.vimPlugins; [ vim-nix ];
     };
 
+    steam = {
+      enable = true;
+    };
+
     git = {
       enable = true;
       userName = "TsubakiDev";
@@ -73,16 +82,6 @@
 
     wezterm = {
       enable = true;
-    };
-
-    starship = {
-      enable = true;
-      settings = {
-        add_newline = false;
-        aws.disabled = true;
-        gcloud.disabled = true;
-        line_break.disabled = true;
-      };
     };
 
     home-manager = {

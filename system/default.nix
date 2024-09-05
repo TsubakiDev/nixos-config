@@ -2,17 +2,8 @@
 
 {
   imports = [
-    ../common/display/default.nix
-    ../common/input/default.nix
-    ../common/sound/default.nix
-    ../common/fonts/default.nix
-    ../common/i18n/default.nix
-    ../common/settings/default.nix
-    ../common/networking/default.nix
-    ../common/boot/default.nix
-
-    ../services/dae/default.nix
-    ../services/printing/default.nix
+    ../common/
+    ../services/
   ];
 
   # Set your time zone.
@@ -32,6 +23,8 @@
 
   programs = {
     fish.enable = true;
+
+    dconf.enable = true;
 
     gnupg.agent = {
       enable = true;
