@@ -22,19 +22,49 @@
 
   fonts.fontconfig.enable = true;
 
+  services.mako.enable = true;
+
   home.packages = with pkgs; [
     # Utilities
     nix-output-monitor
     nixfmt-rfc-style
     fastfetch
     zenith
+    rustdesk-flutter
 
     # Development
     rustup
     graalvmPackages.graalvm-ce
+    vscode-fhs
+    jetbrains.idea-community-bin
 
-    # Related
-    zola
+    # Internet Messaging
+    thunderbird
+    telegram-desktop
+    wechat-uos
+    qq
+
+    # Media
+    vlc
+    obs-studio
+    osu-lazer-bin
+
+    # Password Management
+    bitwarden-desktop
+    yubioath-flutter
+
+    # Gaming
+    steam
+    gdlauncher-carbon
+    osu-lazer-bin
+
+    # Others
+    firefox
+    wineWowPackages.stable
+
+    # Fonts
+    iosevka
+    noto-fonts-cjk-sans
   ];
 
   programs.git = {
@@ -43,6 +73,7 @@
     userEmail = "i@tsubaki.dev";
     signing = {
       key = "C50CA983F44B4FA3";
+      signByDefault = true;
     };
   };
 

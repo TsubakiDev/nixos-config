@@ -16,23 +16,6 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   networking.hostName = "hyacine";
-  # networking = {
-  #   interfaces.enp11s0 = {
-  #     useDHCP = false;
-  #     ipv4.addresses = [
-  #       {
-  #         address = "192.168.1.99";
-  #         prefixLength = 24;
-  #       }
-  #       {
-  #         address = "10.75.34.167";
-  #         prefixLength = 24;
-  #       }
-  #     ];
-  #   };
-  #   defaultGateway = "10.75.34.254";
-  #   nameservers = [ "8.8.8.8" "8.8.4.4" ];
-  # };
   networking.networkmanager.enable = true;
 
   security.rtkit.enable = true;
