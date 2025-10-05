@@ -1,7 +1,7 @@
 {
   pkgs,
   ...
-}: 
+}:
 {
   home = {
     username = "tsubaki";
@@ -27,10 +27,11 @@
   home.packages = with pkgs; [
     # Utilities
     nix-output-monitor
-    nixfmt-rfc-style
+    treefmt
     fastfetch
     zenith
     rustdesk-flutter
+    xwayland-satellite
 
     # Development
     rustup
@@ -47,7 +48,7 @@
     # Media
     vlc
     obs-studio
-    osu-lazer-bin
+    spotify
 
     # Password Management
     bitwarden-desktop
@@ -56,7 +57,6 @@
     # Gaming
     steam
     gdlauncher-carbon
-    osu-lazer-bin
 
     # Others
     firefox
@@ -71,10 +71,12 @@
     enable = true;
     userName = "TsubakiDev";
     userEmail = "i@tsubaki.dev";
-    signing = {
-      key = "C50CA983F44B4FA3";
-      signByDefault = true;
-    };
+    /*
+      signing = {
+        key = "C50CA983F44B4FA3";
+        signByDefault = true;
+      };
+    */
   };
 
   programs.neovim = {

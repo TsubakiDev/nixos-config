@@ -11,6 +11,8 @@
     aagl.inputs.nixpkgs.follows = "nixpkgs";
 
     flake-utils.url = "github:numtide/flake-utils";
+
+    niri.url = "github:sodiboo/niri-flake";
   };
 
   outputs =
@@ -20,6 +22,7 @@
       home-manager,
       aagl,
       flake-utils,
+      niri,
       ...
     }@inputs:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system: {
@@ -37,6 +40,7 @@
         in
         {
           hyacine = mkHost "hyacine" [
+            niri.nixosModules.niri
             home-manager.nixosModules.home-manager
             {
               home-manager = {

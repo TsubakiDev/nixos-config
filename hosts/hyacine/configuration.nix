@@ -82,7 +82,7 @@
         "nix-command"
         "flakes"
       ];
-      substituters = [ 
+      substituters = [
         "https://mirror.iscas.ac.cn/nix-channels/store"
         "https://cache.nixos.org"
       ];
